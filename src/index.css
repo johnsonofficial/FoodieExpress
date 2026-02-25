@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 12%;
+
+    --primary: 4 90% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 100% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 30 20% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 30 100% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 15% 90%;
+    --input: 30 15% 90%;
+    --ring: 4 90% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 4 90% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 30 20% 96%;
+    --sidebar-accent-foreground: 0 0% 12%;
+    --sidebar-border: 30 15% 90%;
+    --sidebar-ring: 4 90% 55%;
+
+    /* Custom food delivery tokens */
+    --warm: 35 100% 97%;
+    --warm-foreground: 25 60% 30%;
+    --brand-gradient: linear-gradient(135deg, hsl(4, 90%, 55%), hsl(30, 100%, 55%));
+    --hero-overlay: linear-gradient(135deg, hsla(4, 90%, 20%, 0.85), hsla(30, 80%, 25%, 0.7));
+    --card-shadow: 0 4px 20px -4px hsla(0, 0%, 0%, 0.08);
+    --card-shadow-hover: 0 12px 32px -8px hsla(4, 90%, 55%, 0.2);
+    --veg-color: 120 60% 40%;
+    --nonveg-color: 0 70% 50%;
+    --star-color: 45 100% 50%;
+  }
+
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 4 90% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 100% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 30 100% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 4 90% 55%;
+
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 4 90% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 4 90% 55%;
+
+    --warm: 0 0% 12%;
+    --warm-foreground: 30 30% 75%;
+    --hero-overlay: linear-gradient(135deg, hsla(4, 90%, 10%, 0.9), hsla(30, 80%, 15%, 0.85));
+    --card-shadow: 0 4px 20px -4px hsla(0, 0%, 0%, 0.3);
+    --card-shadow-hover: 0 12px 32px -8px hsla(4, 90%, 55%, 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .brand-gradient {
+    background: var(--brand-gradient);
+  }
+  .brand-gradient-text {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-overlay {
+    background: var(--hero-overlay);
+  }
+}
